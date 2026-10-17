@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142440">
+  <title>Spark Elegance | Invoice Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/logo.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <img class="brand-logo" src="assets/company-logo.png" alt="Spark Elegance">
+    <p class="nav-caption">INVOICE STUDIO</p>
+    <nav aria-label="Main navigation">
+      <button data-page="overview" class="active">◫ <span>Overview</span></button>
+      <button data-page="invoices">▤ <span>Invoices</span></button>
+      <button data-page="receipts">▧ <span>Receipts</span></button>
+      <button data-page="expenses">▦ <span>Expenses</span></button>
+    </nav>
+    <div class="sidebar-note"><strong>Your business.<br>Your books, in order.</strong><p>Invoices and expenses, all in one local workspace.</p></div>
+    <div class="company-caption">Spark Elegance Event Management FZE LLC<br><small>Ajman, United Arab Emirates</small></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><button id="menu-toggle" class="icon-button mobile-only" aria-label="Toggle menu">☰</button><span class="muted">Workspace / </span><b id="breadcrumb">Overview</b></div><div class="top-actions"><button class="button small" id="export-data">Export data</button><label class="button small upload-button">Import data<input id="import-file" type="file" accept=".json,application/json"></label></div></header>
+    <div class="content"><section class="page-heading"><div><div class="eyebrow">YOUR FINANCES, IN FOCUS</div><h1 id="page-title">Business at a glance.</h1><p class="muted" id="page-description">A clear view of your business finances.</p></div><div class="actions"><button class="button" id="upload-receipt">↑ Upload receipt</button><button class="button primary" id="new-invoice">＋ Create invoice</button></div></section><div id="screen"></div><footer>Spark Elegance Invoice Studio <span>Local workspace · AED overview</span></footer></div>
+  </main>
+  <dialog id="dialog" aria-labelledby="dialog-title"><button type="button" class="close icon-button" id="close-dialog" aria-label="Close dialog">×</button><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
